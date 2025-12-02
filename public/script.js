@@ -40,6 +40,161 @@ const quizData = [
       "Abroad best hai",
     ],
   },
+  {
+    category: "Sleep Schedule",
+    question:
+      "Normally subah kitne baje uth jati hai aur raat ko kitne baje soti hai?",
+    choices: [
+      "6-7 AM uthna, 10-11 PM sona",
+      "8-9 AM uthna, 12-1 AM sona",
+      "Late uthna, Late sona",
+      "No fixed time, mood pe depend",
+    ],
+  },
+  {
+    category: "Baby Planning",
+    question: "Shaadi ke kitne saal baad baby planning?",
+    choices: [
+      "1-2 saal mein",
+      "3-5 saal ke baad",
+      "5+ saal ya kabhi nahi",
+      "Jaisa husband bolega",
+    ],
+  },
+  {
+    category: "Privacy in Relationship",
+    question: "Couple ke beech privacy honi chahiye ya nahi?",
+    choices: [
+      "Full privacy, phone bhi nahi check",
+      "Thodi privacy but bada trust issue nahi",
+      "Sab kuch share, no secrets",
+      "Mujhe full access chahiye, tumhe nhi",
+    ],
+  },
+  {
+    category: "Money Management After Marriage",
+    question:
+      "Shaadi ke baad paise kaun manage karega? Tera khud ka paisa kharch karne ki freedom rahegi?",
+    choices: [
+      "Husband manage karega, mujhe pocket money milegi",
+      "Joint account + mera personal account free",
+      "Sab alag-alag, bill 50-50",
+      "Main manage karungi, husband dega paisa",
+    ],
+  },
+  {
+    category: "Male Friends",
+    question: "Currently koi male best friend hai ya close male friend?",
+    choices: [
+      "Haan, 1-2 close",
+      "Haan but normal friends",
+      "Sirf colleagues, close nahi",
+      "Bilkul nahi",
+    ],
+  },
+  {
+    category: "Husband's Salary Share",
+    question:
+      "Husband ki salary ka kitna percent wife ke personal account mein automatically aana chahiye?",
+    choices: ["0% – husband manage", "10-20%", "30-50%", "50% to 100%"],
+  },
+  {
+    category: "Phone Password",
+    question:
+      "Shaadi ke baad phone ka password mujhe dena padega ya privacy bolke taal dogi?",
+    choices: [
+      "Password dungi, kuch hide nahi",
+      "Sirf emergency mein dikhaungi",
+      "Kabhi nahi, privacy important",
+      "Tu bhi mujhe apna password dega tab",
+    ],
+  },
+  {
+    category: "Childhood Reaction to Scolding",
+    question:
+      "Bachpan mein teacher ne class mein daanta toh tu roti thi ya jawab deti thi?",
+    choices: [
+      "Roti thi",
+      "Chup reh jati thi",
+      "Jawab deti thi",
+      "Teacher se lad padti thi",
+    ],
+  },
+  {
+    category: "Biggest Family Fight",
+    question:
+      "Tere ghar ka sabse bada jhagda kis baat pe hua tha jo aaj bhi yaad hai?",
+    choices: [
+      "Paise ke upper",
+      "Respect/izzat ke upper",
+      "Chhoti baat pe bada bawal",
+      "Kabhi bada jhagda nahi hua",
+    ],
+  },
+  {
+    category: "Lending Money",
+    question:
+      "Agar tera best friend, relative, parents tujhse 50k udhaar maange aur bole 5 saal mein lautayega, degi?",
+    choices: [
+      "Haan de dungi bina soch ke",
+      "Sirf agar emergency ho",
+      "Nahi dungi, sorry bol dungi",
+      "Thoda-thoda de sakti hoon max 10-15k",
+    ],
+  },
+  {
+    category: "Changing Husband",
+    question: "Apne future husband mein sabse pehle kya change karegi?",
+    choices: [
+      "Uska gussa",
+      "Uski annoying habits",
+      "Uska friend circle",
+      "Kuch nahi change karungi",
+    ],
+  },
+  {
+    category: "Parents Saying Sorry",
+    question:
+      "Tere papa ne kabhi mummy ke saamne sorry bola hai ya mummy hi maafi maang leti thi?",
+    choices: [
+      "Papa kabhi sorry nahi bolte",
+      "Papa sorry bolte the",
+      "Mummy hi mostly sorry bolti thi",
+      "Dono kabhi sorry nahi bolte the",
+    ],
+  },
+  {
+    category: "Shopping Style",
+    question:
+      "Shopping karti hai toh budget banake jaati hai ya dil khol ke shopping?",
+    choices: [
+      "Strict budget",
+      "Approximate idea hota hai",
+      "Dil kare toh ho jata hai",
+      "Paise kon dekhta hai",
+    ],
+  },
+  {
+    category: "Handling Unwanted Attention",
+    question:
+      "Kahin koi ladka zyada line maar raha ho toh tu kaise handle karti?",
+    choices: [
+      "Direct mana kaise karun",
+      "Friendly rehti but thoda durr rehti hoon",
+      "Seedha bol deti I'm not interested",
+      "HR complaint kar deti",
+    ],
+  },
+  {
+    category: "Husband Hiding Salary",
+    question: "Agar pata chale husband salary chhupa raha hai, first reaction?",
+    choices: [
+      "Ghar chod ke maayke chali jaungi",
+      "Bada jhagda + trust gaya forever",
+      "Baat karke samjhaungi, mauka dungi",
+      "Chup reh jaungi",
+    ],
+  },
 ];
 
 const choiceToValueMap = {
@@ -53,6 +208,7 @@ const choiceToValueMap = {
     "Bilkul force karungi, separate nahi reh sakte": "Red",
     "Long-distance bhi chalega 2-3 saal": "Green",
     "Main ghar pe reh longi": "Bright Green",
+    "Not asked in original list (question 2 missing)": "Neutral",
   },
   "Parents' Arguments": {
     "Papa mostly sahi": "Green",
@@ -65,6 +221,96 @@ const choiceToValueMap = {
     "City hi but peaceful area": "Green",
     "Village peaceful hota hai": "Bright Green",
     "Abroad best hai": "Red",
+  },
+  "Sleep Schedule": {
+    "6-7 AM uthna, 10-11 PM sona": "Bright Green",
+    "8-9 AM uthna, 12-1 AM sona": "Light Green",
+    "Late uthna, Late sona": "Orange",
+    "No fixed time, mood pe depend": "Red",
+  },
+  "Baby Planning": {
+    "1-2 saal mein": "Bright Green",
+    "3-5 saal ke baad": "Orange",
+    "5+ saal ya kabhi nahi": "Red",
+    "Jaisa husband bolega": "Bright Green",
+  },
+  "Privacy in Relationship": {
+    "Full privacy, phone bhi nahi check": "Orange",
+    "Thodi privacy but bada trust issue nahi": "Green",
+    "Sab kuch share, no secrets": "Bright Green",
+    "Mujhe full access chahiye, tumhe nhi": "Big Red",
+  },
+  "Money Management After Marriage": {
+    "Husband manage karega, mujhe pocket money milegi": "Orange",
+    "Joint account + mera personal account free": "Green",
+    "Sab alag-alag, bill 50-50": "Red",
+    "Main manage karungi, husband dega paisa": "Big Red",
+  },
+  "Male Friends": {
+    "Haan, 1-2 close": "Red",
+    "Haan but normal friends": "Orange",
+    "Sirf colleagues, close nahi": "Light Green",
+    "Bilkul nahi": "Bright Green",
+  },
+  "Husband's Salary Share": {
+    "0% – husband manage": "Bright Green",
+    "10-20%": "Light Green",
+    "30-50%": "Orange",
+    "50% to 100%": "Big Red",
+  },
+  "Phone Password": {
+    "Password dungi, kuch hide nahi": "Bright Green",
+    "Sirf emergency mein dikhaungi": "Light Green",
+    "Kabhi nahi, privacy important": "Red",
+    "Tu bhi mujhe apna password dega tab": "Orange",
+  },
+  "Childhood Reaction to Scolding": {
+    "Roti thi": "Green",
+    "Chup reh jati thi": "Bright Green",
+    "Jawab deti thi": "Orange",
+    "Teacher se lad padti thi": "Red",
+  },
+  "Biggest Family Fight": {
+    "Paise ke upper": "Orange",
+    "Respect/izzat ke upper": "Light Green",
+    "Chhoti baat pe bada bawal": "Red",
+    "Kabhi bada jhagda nahi hua": "Bright Green",
+  },
+  "Lending Money": {
+    "Haan de dungi bina soch ke": "Red",
+    "Sirf agar emergency ho": "Green",
+    "Nahi dungi, sorry bol dungi": "Bright Green",
+    "Thoda-thoda de sakti hoon max 10-15k": "Light Green",
+  },
+  "Changing Husband": {
+    "Uska gussa": "Orange",
+    "Uski annoying habits": "Orange",
+    "Uska friend circle": "Red",
+    "Kuch nahi change karungi": "Bright Green",
+  },
+  "Parents Saying Sorry": {
+    "Papa kabhi sorry nahi bolte": "Bright Green",
+    "Papa sorry bolte the": "Light Green",
+    "Mummy hi mostly sorry bolti thi": "Red",
+    "Dono kabhi sorry nahi bolte the": "Orange",
+  },
+  "Shopping Style": {
+    "Strict budget": "Bright Green",
+    "Approximate idea hota hai": "Green",
+    "Dil kare toh ho jata hai": "Orange",
+    "Paise kon dekhta hai": "Red",
+  },
+  "Handling Unwanted Attention": {
+    "Direct mana kaise karun": "Orange",
+    "Friendly rehti but thoda durr rehti hoon": "Red",
+    "Seedha bol deti \"I'm not interested\"": "Bright Green",
+    "HR complaint kar deti": "Light Green",
+  },
+  "Husband Hiding Salary": {
+    "Ghar chod ke maayke chali jaungi": "Big Red",
+    "Bada jhagda + trust gaya forever": "Red",
+    "Baat karke samjhaungi, mauka dungi": "Bright Green",
+    "Chup reh jaungi": "Light Green",
   },
 };
 
