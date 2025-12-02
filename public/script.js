@@ -802,7 +802,7 @@ function showThankYouMessage() {
   overlay.innerHTML = `
     <div style="font-size: 3rem; margin-bottom: 15px;">💕</div>
     <div>Thank You!</div>
-    <div style="font-size: 1.2rem; margin-top: 10px; font-weight: normal;">Your answers have been sent 💖</div>
+    <div style="font-size: 1.2rem; margin-top: 10px; font-weight: normal;">for your time and all the effort you put in.💖</div>
   `;
   
   document.body.appendChild(overlay);
