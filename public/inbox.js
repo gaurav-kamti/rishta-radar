@@ -39,7 +39,7 @@ async function loadResults() {
       const results = session.results || {};
       const detailedAnswers = results.detailedAnswers || [];
       
-      // Calculate verdict color based on flags
+      // Calculate verdict color based on weighted points
       const brightGreen = results.brightGreen || 0;
       const green = results.green || 0;
       const lightGreen = results.lightGreen || 0;
@@ -47,17 +47,17 @@ async function loadResults() {
       const red = results.red || 0;
       const bigRed = results.bigRed || 0;
       
-      const totalRed = bigRed + red + orange;
-      const totalGreen = brightGreen + green + lightGreen;
+      const totalRedPoints = (orange * 0.5) + (red * 1) + (bigRed * 2);
+      const totalGreenPoints = (lightGreen * 0.5) + (green * 1) + (brightGreen * 2);
       
       let verdictColor;
-      if (totalRed >= totalGreen * 2.5) {
+      if (totalRedPoints >= totalGreenPoints * 2.5) {
         verdictColor = 'darkred';
-      } else if (totalRed >= totalGreen * 1.5) {
+      } else if (totalRedPoints >= totalGreenPoints * 1.5) {
         verdictColor = 'red';
-      } else if (totalGreen >= totalRed * 2) {
+      } else if (totalGreenPoints >= totalRedPoints * 2) {
         verdictColor = '#006400';
-      } else if (totalGreen > totalRed) {
+      } else if (totalGreenPoints > totalRedPoints) {
         verdictColor = 'green';
       } else {
         verdictColor = '#d35400';

@@ -16,13 +16,13 @@ const quizData = [
     choices: [
       "Bilkul force karungi, separate nahi reh sakte",
       "Long-distance bhi chalega 2-3 saal",
-      "Main ghar pe reh longi",
-      "Not asked in original list (question 2 missing)",
+      "Main ghar pe reh lungi",
+      "Mere ghar pe sath rehna hoga",
     ],
   },
   {
     category: "Parents' Arguments",
-    question: "Tere mummy-papa ke jhagde mein maximum time kon sahi hota tha?",
+    question: "Tumhare mummy-papa ke jhagde mein maximum time kon sahi hote the?",
     choices: [
       "Papa mostly sahi",
       "Mummy mostly sahi",
@@ -43,10 +43,10 @@ const quizData = [
   {
     category: "Sleep Schedule",
     question:
-      "Normally subah kitne baje uth jati hai aur raat ko kitne baje soti hai?",
+      "Normally kab soti ho aur kab jagti ho?",
     choices: [
-      "6-7 AM uthna, 10-11 PM sona",
-      "8-9 AM uthna, 12-1 AM sona",
+      "jaldi uthna, jaldi sona",
+      "jaldi uthna, late sona",
       "Late uthna, Late sona",
       "No fixed time, mood pe depend",
     ],
@@ -58,7 +58,7 @@ const quizData = [
       "1-2 saal mein",
       "3-5 saal ke baad",
       "5+ saal ya kabhi nahi",
-      "Jaisa husband bolega",
+      "Jaisa husband kahenge",
     ],
   },
   {
@@ -68,18 +68,18 @@ const quizData = [
       "Full privacy, phone bhi nahi check",
       "Thodi privacy but bada trust issue nahi",
       "Sab kuch share, no secrets",
-      "Mujhe full access chahiye, tumhe nhi",
+      "Mujhe full access chahiye, tumhe nahi",
     ],
   },
   {
-    category: "Money Management After Marriage",
+    category: "Money Division After Marriage",
     question:
-      "Shaadi ke baad paise kaun manage karega? Tera khud ka paisa kharch karne ki freedom rahegi?",
+      "Shaadi ke baad paise kaise divide honge?",
     choices: [
       "Husband manage karega, mujhe pocket money milegi",
-      "Joint account + mera personal account free",
+      "Joint account + mera personal account",
       "Sab alag-alag, bill 50-50",
-      "Main manage karungi, husband dega paisa",
+      "Main manage karungi, husband paise denge",
     ],
   },
   {
@@ -88,7 +88,7 @@ const quizData = [
     choices: [
       "Haan, 1-2 close",
       "Haan but normal friends",
-      "Sirf colleagues, close nahi",
+      "Sirf colleagues/classmates, close nahi",
       "Bilkul nahi",
     ],
   },
@@ -96,7 +96,7 @@ const quizData = [
     category: "Husband's Salary Share",
     question:
       "Husband ki salary ka kitna percent wife ke personal account mein automatically aana chahiye?",
-    choices: ["0% – husband manage", "10-20%", "30-50%", "50% to 100%"],
+    choices: ["0% – husband manage kare", "100% - Main manage karungi", "50% approx", "Pocket money jaise"],
   },
   {
     category: "Phone Password",
@@ -106,13 +106,13 @@ const quizData = [
       "Password dungi, kuch hide nahi",
       "Sirf emergency mein dikhaungi",
       "Kabhi nahi, privacy important",
-      "Tu bhi mujhe apna password dega tab",
+      "Husband bhi dega tab",
     ],
   },
   {
     category: "Childhood Reaction to Scolding",
     question:
-      "Bachpan mein teacher ne class mein daanta toh tu roti thi ya jawab deti thi?",
+      "Bachpan mein teacher ne class mein daanta toh tum roti thi ya jawab deti thi?",
     choices: [
       "Roti thi",
       "Chup reh jati thi",
@@ -123,18 +123,18 @@ const quizData = [
   {
     category: "Biggest Family Fight",
     question:
-      "Tere ghar ka sabse bada jhagda kis baat pe hua tha jo aaj bhi yaad hai?",
+      "Tumhare ghar ka sabse bada jhagda kis baat pe hua tha jo aaj bhi yaad hai?",
     choices: [
-      "Paise ke upper",
-      "Respect/izzat ke upper",
-      "Chhoti baat pe bada bawal",
+      "Paise ke upar",
+      "Respect ke upar",
+      "Chhoti baat pe bada bawaal",
       "Kabhi bada jhagda nahi hua",
     ],
   },
   {
     category: "Lending Money",
     question:
-      "Agar tera best friend, relative, parents tujhse 50k udhaar maange aur bole 5 saal mein lautayega, degi?",
+      "Agar tumhare best-friends, relatives, parents tumse 3 lac udhaar maange aur bole 5 saal mein lautayega, dogi?",
     choices: [
       "Haan de dungi bina soch ke",
       "Sirf agar emergency ho",
@@ -143,11 +143,11 @@ const quizData = [
     ],
   },
   {
-    category: "Changing Husband",
-    question: "Apne future husband mein sabse pehle kya change karegi?",
+    category: "Changing in Husband",
+    question: "Apne future husband mein sabse pehle kya change karogi?",
     choices: [
       "Uska gussa",
-      "Uski annoying habits",
+      "Uski annoying(nashe, unhygienic, etc)  habits",
       "Uska friend circle",
       "Kuch nahi change karungi",
     ],
@@ -155,7 +155,7 @@ const quizData = [
   {
     category: "Parents Saying Sorry",
     question:
-      "Tere papa ne kabhi mummy ke saamne sorry bola hai ya mummy hi maafi maang leti thi?",
+      "Tumhare papa ne kabhi mummy ke saamne sorry bola hai ya mummy hi maafi maang leti thi?",
     choices: [
       "Papa kabhi sorry nahi bolte",
       "Papa sorry bolte the",
@@ -166,7 +166,7 @@ const quizData = [
   {
     category: "Shopping Style",
     question:
-      "Shopping karti hai toh budget banake jaati hai ya dil khol ke shopping?",
+      "Shopping karti ho toh budget banake jaati ho ya dil khol ke shopping?",
     choices: [
       "Strict budget",
       "Approximate idea hota hai",
@@ -180,9 +180,9 @@ const quizData = [
       "Kahin koi ladka zyada line maar raha ho toh tu kaise handle karti?",
     choices: [
       "Direct mana kaise karun",
-      "Friendly rehti but thoda durr rehti hoon",
+      "Friendly rehti but thoda door rehti hoon",
       "Seedha bol deti I'm not interested",
-      "HR complaint kar deti",
+      "Bina bole distance bana lungi",
     ],
   },
   {
@@ -199,70 +199,70 @@ const quizData = [
 
 const choiceToValueMap = {
   Politics: {
-    BJP: "Green",
+    BJP: "Bright Green",
     Congress: "Red",
-    "Depends on candidate, not party": "Orange",
+    "Depends on candidate, not party": "Green",
     "Neither, I hate politics": "Light Green",
   },
   "Living Arrangement After Marriage": {
-    "Bilkul force karungi, separate nahi reh sakte": "Red",
-    "Long-distance bhi chalega 2-3 saal": "Green",
-    "Main ghar pe reh longi": "Bright Green",
-    "Not asked in original list (question 2 missing)": "Neutral",
+    "Bilkul force karungi, separate nahi reh sakte": "Light Green",
+    "Long-distance bhi chalega 2-3 saal": "Bright Green",
+    "Main ghar pe reh lungi": "Orange",
+    "Mere ghar pe sath rehna hoga": "Big Red",
   },
   "Parents' Arguments": {
-    "Papa mostly sahi": "Green",
-    "Mummy mostly sahi": "Red",
-    "Dono barabar / Depends on situation": "Orange",
-    "Main kabhi notice nahi karti thi": "Light Green",
+    "Papa mostly sahi": "Bright Green",
+    "Mummy mostly sahi": "Orange",
+    "Dono barabar / Depends on situation": "Green",
+    "Main kabhi notice nahi karti thi": "Big Red",
   },
   "City vs Village": {
-    "100% city": "Orange",
+    "100% city": "Red",
     "City hi but peaceful area": "Green",
     "Village peaceful hota hai": "Bright Green",
-    "Abroad best hai": "Red",
+    "Abroad best hai": "Big Red",
   },
   "Sleep Schedule": {
-    "6-7 AM uthna, 10-11 PM sona": "Bright Green",
-    "8-9 AM uthna, 12-1 AM sona": "Light Green",
-    "Late uthna, Late sona": "Orange",
-    "No fixed time, mood pe depend": "Red",
+    "jaldi uthna, jaldi sona": "Green",
+    "jaldi uthna, late sona": "Light Green",
+    "Late uthna, Late sona": "Red",
+    "No fixed time, mood pe depend": "Big Red",
   },
   "Baby Planning": {
-    "1-2 saal mein": "Bright Green",
-    "3-5 saal ke baad": "Orange",
+    "1-2 saal mein": "Light Green",
+    "3-5 saal ke baad": "Green",
     "5+ saal ya kabhi nahi": "Red",
-    "Jaisa husband bolega": "Bright Green",
+    "Jaisa husband kahenge": "Bright Green",
   },
   "Privacy in Relationship": {
-    "Full privacy, phone bhi nahi check": "Orange",
-    "Thodi privacy but bada trust issue nahi": "Green",
+    "Full privacy, phone bhi nahi check": "Big Red",
+    "Thodi privacy but bada trust issue nahi": "Light Green",
     "Sab kuch share, no secrets": "Bright Green",
-    "Mujhe full access chahiye, tumhe nhi": "Big Red",
+    "Mujhe full access chahiye, tumhe nahi": "Big Red",
   },
-  "Money Management After Marriage": {
-    "Husband manage karega, mujhe pocket money milegi": "Orange",
-    "Joint account + mera personal account free": "Green",
-    "Sab alag-alag, bill 50-50": "Red",
-    "Main manage karungi, husband dega paisa": "Big Red",
+  "Money Division After Marriage": {
+    "Husband manage karega, mujhe pocket money milegi": "Green",
+    "Joint account + mera personal account": "Orange",
+    "Sab alag-alag, bill 50-50": "Big Red",
+    "Main manage karungi, husband paise denge": "Red",
   },
   "Male Friends": {
-    "Haan, 1-2 close": "Red",
+    "Haan, 1-2 close": "Big Red",
     "Haan but normal friends": "Orange",
-    "Sirf colleagues, close nahi": "Light Green",
+    "Sirf colleagues/classmates, close nahi": "Green",
     "Bilkul nahi": "Bright Green",
   },
   "Husband's Salary Share": {
-    "0% – husband manage": "Bright Green",
-    "10-20%": "Light Green",
-    "30-50%": "Orange",
-    "50% to 100%": "Big Red",
+    "0% – husband manage kare": "Green",
+    "100% - Main manage karungi": "Orange",
+    "50% approx": "Orange",
+    "Pocket money jaise": "Bright Green",
   },
   "Phone Password": {
     "Password dungi, kuch hide nahi": "Bright Green",
-    "Sirf emergency mein dikhaungi": "Light Green",
-    "Kabhi nahi, privacy important": "Red",
-    "Tu bhi mujhe apna password dega tab": "Orange",
+    "Sirf emergency mein dikhaungi": "Red",
+    "Kabhi nahi, privacy important": "Big Red",
+    "Husband bhi dega tab": "Bright Green",
   },
   "Childhood Reaction to Scolding": {
     "Roti thi": "Green",
@@ -271,10 +271,10 @@ const choiceToValueMap = {
     "Teacher se lad padti thi": "Red",
   },
   "Biggest Family Fight": {
-    "Paise ke upper": "Orange",
-    "Respect/izzat ke upper": "Light Green",
-    "Chhoti baat pe bada bawal": "Red",
-    "Kabhi bada jhagda nahi hua": "Bright Green",
+    "Paise ke upar": "Red",
+    "Respect ke upar": "Orange",
+    "Chhoti baat pe bada bawaal": "Green",
+    "Kabhi bada jhagda nahi hua": "Big Red",
   },
   "Lending Money": {
     "Haan de dungi bina soch ke": "Red",
@@ -282,29 +282,29 @@ const choiceToValueMap = {
     "Nahi dungi, sorry bol dungi": "Bright Green",
     "Thoda-thoda de sakti hoon max 10-15k": "Light Green",
   },
-  "Changing Husband": {
+  "Changing in Husband": {
     "Uska gussa": "Orange",
-    "Uski annoying habits": "Orange",
+    "Uski annoying(nashe, unhygienic, etc)  habits": "Bright Green",
     "Uska friend circle": "Red",
-    "Kuch nahi change karungi": "Bright Green",
+    "Kuch nahi change karungi": "Green",
   },
   "Parents Saying Sorry": {
     "Papa kabhi sorry nahi bolte": "Bright Green",
-    "Papa sorry bolte the": "Light Green",
-    "Mummy hi mostly sorry bolti thi": "Red",
+    "Papa sorry bolte the": "Red",
+    "Mummy hi mostly sorry bolti thi": "Green",
     "Dono kabhi sorry nahi bolte the": "Orange",
   },
   "Shopping Style": {
     "Strict budget": "Bright Green",
     "Approximate idea hota hai": "Green",
-    "Dil kare toh ho jata hai": "Orange",
-    "Paise kon dekhta hai": "Red",
+    "Dil kare toh ho jata hai": "Red",
+    "Paise kon dekhta hai": "Big Red",
   },
   "Handling Unwanted Attention": {
-    "Direct mana kaise karun": "Orange",
-    "Friendly rehti but thoda durr rehti hoon": "Red",
-    "Seedha bol deti \"I'm not interested\"": "Bright Green",
-    "HR complaint kar deti": "Light Green",
+    "Direct mana kaise karun": "Red",
+    "Friendly rehti but thoda door rehti hoon": "Big Red",
+    "Seedha bol deti I'm not interested": "Bright Green",
+    "Bina bole distance bana lungi": "Green",
   },
   "Husband Hiding Salary": {
     "Ghar chod ke maayke chali jaungi": "Big Red",
@@ -326,6 +326,7 @@ const finalResultsList = document.getElementById("final-results");
 const questionText = document.getElementById("question-text");
 const choicesContainer = document.getElementById("choices-container");
 const nextButton = document.getElementById("next-button");
+const prevButton = document.getElementById("prev-button");
 
 let brightGreen = 0;
 let green = 0;
@@ -343,6 +344,19 @@ const loadQuestion = () => {
   choicesContainer.innerHTML = "";
   nextButton.disabled = true;
   currentSelection = null;
+
+  // Show/hide previous button
+  if (currentQuestionIndex > 0) {
+    prevButton.style.display = "inline-block";
+  } else {
+    prevButton.style.display = "none";
+  }
+
+  // If going back, restore previous selection
+  if (userFavorites[currentQuestionIndex]) {
+    currentSelection = userFavorites[currentQuestionIndex].choice;
+    nextButton.disabled = false;
+  }
 
   const currentQuestion = quizData[currentQuestionIndex];
   questionText.textContent = currentQuestion.question;
@@ -395,13 +409,22 @@ nextButton.addEventListener("click", () => {
   if (!currentSelection) return;
 
   const currentCategory = quizData[currentQuestionIndex].category;
-  userFavorites.push({
+  
+  // Update or add answer
+  userFavorites[currentQuestionIndex] = {
     category: currentCategory,
     choice: currentSelection,
-  });
+  };
 
   currentQuestionIndex++;
   loadQuestion();
+});
+
+prevButton.addEventListener("click", () => {
+  if (currentQuestionIndex > 0) {
+    currentQuestionIndex--;
+    loadQuestion();
+  }
 });
 
 
@@ -439,18 +462,19 @@ function showResults() {
     finalResultsList.appendChild(li);
   });
 
-  const totalRed = bigRed + red + orange;
-  const totalGreen = brightGreen + green + lightGreen;
+  // Calculate weighted points
+  const totalRedPoints = (orange * 0.5) + (red * 1) + (bigRed * 2);
+  const totalGreenPoints = (lightGreen * 0.5) + (green * 1) + (brightGreen * 2);
 
   let verdict = "";
 
-  if (totalRed >= totalGreen * 2.5) {
+  if (totalRedPoints >= totalGreenPoints * 2.5) {
     verdict = "This relationship shows multiple serious red flags.";
-  } else if (totalRed >= totalGreen * 1.5) {
+  } else if (totalRedPoints >= totalGreenPoints * 1.5) {
     verdict = "There are several concerning patterns that deserve attention.";
-  } else if (totalGreen >= totalRed * 2) {
+  } else if (totalGreenPoints >= totalRedPoints * 2) {
     verdict = "This relationship shows many healthy, respectful behaviours.";
-  } else if (totalGreen > totalRed) {
+  } else if (totalGreenPoints > totalRedPoints) {
     verdict = "Overall healthy, with some areas to watch.";
   } else {
     verdict = "The concerns and positive signs are roughly balanced. Reflection is needed.";

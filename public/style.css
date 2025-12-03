@@ -224,8 +224,12 @@ h1 {
 }
 
 .button-container {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 #next-button,
@@ -557,4 +561,25 @@ h1 {
 #restart-button:hover {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 12px 30px rgba(255, 105, 180, 0.5);
+}
+
+#prev-button {
+  display: inline-block;
+  padding: 16px 35px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.9);
+  color: #ff69b4;
+  border: 3px solid #ff69b4;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.3);
+}
+
+#prev-button:hover {
+  background: #ff69b4;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5);
 }
