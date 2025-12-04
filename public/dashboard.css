@@ -346,12 +346,12 @@ body::before {
 
   #title {
     font-size: 1.8rem;
-    padding: 10px 15px;
+    margin-bottom: 8px;
   }
 
   .tagline {
     font-size: 1rem;
-    padding: 10px 15px;
+    margin-bottom: 10px;
   }
 
   .discription {
@@ -378,12 +378,12 @@ body::before {
 
   #title {
     font-size: 1.5rem;
-    padding: 8px 12px;
+    margin-bottom: 6px;
   }
 
   .tagline {
     font-size: 0.9rem;
-    padding: 8px 12px;
+    margin-bottom: 8px;
     line-height: 1.5;
   }
 
