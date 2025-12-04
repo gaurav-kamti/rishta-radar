@@ -17,8 +17,8 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/rishta
 
 // Connect to MongoDB
 mongoose.connect(MONGODB_URI)
-  .then(() => {})
-  .catch(err => {});
+  .then(() => console.log('✅ MongoDB Connected'))
+  .catch(err => console.error('❌ MongoDB Error:', err.message));
 
 // Middleware
 app.use(bodyParser.json());
@@ -42,6 +42,11 @@ const requireAuth = (req, res, next) => {
   }
   next();
 };
+
+// Root route - redirect to landing page
+app.get('/', (req, res) => {
+  res.redirect('/landing.html');
+});
 
 // Routes
 app.post('/api/signup', async (req, res) => {
