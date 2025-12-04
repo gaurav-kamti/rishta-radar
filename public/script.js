@@ -492,7 +492,7 @@ const sessionId = urlParams.get('sessionId');
 async function checkSession() {
   if (!sessionId) {
     showCuteAlert('Invalid quiz link', () => {
-      window.location.href = '/login.html';
+      window.location.href = '/login';
     });
     return;
   }
@@ -511,7 +511,7 @@ async function checkSession() {
     showNameInputModal(session.creatorName);
   } catch (error) {
     showCuteAlert('Session not found', () => {
-      window.location.href = '/login.html';
+      window.location.href = '/login';
     });
   }
 }

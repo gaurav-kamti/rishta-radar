@@ -3,12 +3,12 @@ async function checkAuth() {
   try {
     const response = await fetch('/api/me');
     if (!response.ok) {
-      window.location.href = '/login.html';
+      window.location.href = '/login';
       return null;
     }
     return await response.json();
   } catch (error) {
-    window.location.href = '/login.html';
+    window.location.href = '/login';
     return null;
   }
 }
@@ -25,7 +25,7 @@ window.onload = async () => {
   // Logout
   document.getElementById('logoutBtn').addEventListener('click', async () => {
     await fetch('/api/logout', { method: 'POST' });
-    window.location.href = '/login.html';
+    window.location.href = '/login';
   });
   
   // Start button - create session

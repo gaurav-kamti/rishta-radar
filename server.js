@@ -43,9 +43,41 @@ const requireAuth = (req, res, next) => {
   next();
 };
 
-// Root route - redirect to landing page
+// Clean URL routes (without .html)
 app.get('/', (req, res) => {
-  res.redirect('/landing.html');
+  res.sendFile(__dirname + '/public/landing.html');
+});
+
+app.get('/landing', (req, res) => {
+  res.sendFile(__dirname + '/public/landing.html');
+});
+
+app.get('/login', (req, res) => {
+  res.sendFile(__dirname + '/public/login.html');
+});
+
+app.get('/signup', (req, res) => {
+  res.sendFile(__dirname + '/public/signup.html');
+});
+
+app.get('/dashboard', (req, res) => {
+  res.sendFile(__dirname + '/public/dashboard.html');
+});
+
+app.get('/quiz', (req, res) => {
+  res.sendFile(__dirname + '/public/quiz.html');
+});
+
+app.get('/inbox', (req, res) => {
+  res.sendFile(__dirname + '/public/inbox.html');
+});
+
+app.get('/privacy', (req, res) => {
+  res.sendFile(__dirname + '/public/privacy.html');
+});
+
+app.get('/terms', (req, res) => {
+  res.sendFile(__dirname + '/public/terms.html');
 });
 
 // Routes
@@ -132,7 +164,7 @@ app.post('/api/create-session', requireAuth, async (req, res) => {
     
     await quizSession.save();
     
-    const shareLink = `${req.protocol}://${req.get('host')}/quiz.html?sessionId=${sessionId}`;
+    const shareLink = `${req.protocol}://${req.get('host')}/quiz?sessionId=${sessionId}`;
     res.json({ sessionId, shareLink });
   } catch (error) {
     res.status(500).json({ error: 'Server error' });
