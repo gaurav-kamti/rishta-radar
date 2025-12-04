@@ -1,7 +1,7 @@
 {
-    "name": "rishta-radar",
+    "name": "partnerscan",
     "version": "1.0.0",
-    "description": "Collaborative quiz app",
+    "description": "Relationship compatibility quiz app",
     "main": "server.js",
     "scripts": {
         "start": "node server.js",

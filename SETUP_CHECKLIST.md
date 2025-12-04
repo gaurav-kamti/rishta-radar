@@ -1,6 +1,6 @@
 # ✅ Setup Checklist
 
-Follow this checklist to get your Rishta Radar app running:
+Follow this checklist to get your PartnerScan app running:
 
 ## 📦 Prerequisites
 

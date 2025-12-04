@@ -1,4 +1,4 @@
-# 🎯 START HERE - Rishta Radar Setup
+# 🎯 START HERE - PartnerScan Setup
 
 Welcome! Your collaborative quiz app is ready. Follow these steps to get started.
 

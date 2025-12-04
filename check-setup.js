@@ -2,7 +2,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-console.log('\n🔍 Checking Rishta Radar Setup...\n');
+console.log('\n🔍 Checking PartnerScan Setup...\n');
 
 // Check environment variables
 console.log('📋 Environment Variables:');

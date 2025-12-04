@@ -1,4 +1,4 @@
-# 📊 Rishta Radar - Project Summary
+# 📊 PartnerScan - Project Summary
 
 ## ✅ What's Been Built
 

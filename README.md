@@ -1,4 +1,4 @@
-# Rishta Radar - Collaborative Quiz App
+# PartnerScan - Collaborative Quiz App
 
 A collaborative quiz application where User1 creates a shareable link and User2 takes the quiz, with results automatically sent back to User1.
 
