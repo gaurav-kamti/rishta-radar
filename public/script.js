@@ -314,6 +314,19 @@ const choiceToValueMap = {
   },
 };
 
+// Shuffle questions for randomization
+function shuffleArray(array) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+// Randomize questions at the start
+const shuffledQuizData = shuffleArray(quizData);
+
 const userFavorites = [];
 let currentQuestionIndex = 0;
 let score = 0;
@@ -336,7 +349,7 @@ let red = 0;
 let bigRed = 0;
 
 const loadQuestion = () => {
-  if (currentQuestionIndex >= quizData.length) {
+  if (currentQuestionIndex >= shuffledQuizData.length) {
     showResults();
     return;
   }
@@ -358,12 +371,12 @@ const loadQuestion = () => {
     nextButton.disabled = false;
   }
 
-  const currentQuestion = quizData[currentQuestionIndex];
+  const currentQuestion = shuffledQuizData[currentQuestionIndex];
   questionText.textContent = currentQuestion.question;
 
   // Update progress bar
   const progressFill = document.getElementById('progress-fill');
-  const progressPercent = ((currentQuestionIndex + 1) / quizData.length) * 100;
+  const progressPercent = ((currentQuestionIndex + 1) / shuffledQuizData.length) * 100;
   if (progressFill) {
     progressFill.style.width = progressPercent + '%';
   }
@@ -371,10 +384,10 @@ const loadQuestion = () => {
   // Update question number
   const questionNumber = document.getElementById('question-number');
   if (questionNumber) {
-    questionNumber.textContent = `Question ${currentQuestionIndex + 1} of ${quizData.length}`;
+    questionNumber.textContent = `Question ${currentQuestionIndex + 1} of ${shuffledQuizData.length}`;
   }
 
-  if (currentQuestionIndex === quizData.length - 1) {
+  if (currentQuestionIndex === shuffledQuizData.length - 1) {
     nextButton.textContent = "Finish Survey 💕";
   } else {
     nextButton.textContent = "Next Question 💖";
@@ -408,7 +421,7 @@ function selectAnswer(choice) {
 nextButton.addEventListener("click", () => {
   if (!currentSelection) return;
 
-  const currentCategory = quizData[currentQuestionIndex].category;
+  const currentCategory = shuffledQuizData[currentQuestionIndex].category;
   
   // Update or add answer
   userFavorites[currentQuestionIndex] = {
@@ -486,7 +499,7 @@ function showResults() {
 
 // Get session ID from URL
 const urlParams = new URLSearchParams(window.location.search);
-const sessionId = urlParams.get('sessionId');
+const sessionId = urlParams.get('s') || urlParams.get('sessionId');
 
 // Check if this is a shared quiz
 async function checkSession() {

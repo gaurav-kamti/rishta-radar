@@ -164,7 +164,7 @@ app.post('/api/create-session', requireAuth, async (req, res) => {
     
     await quizSession.save();
     
-    const shareLink = `${req.protocol}://${req.get('host')}/quiz?sessionId=${sessionId}`;
+    const shareLink = `${req.protocol}://${req.get('host')}/quiz?s=${sessionId}`;
     res.json({ sessionId, shareLink });
   } catch (error) {
     res.status(500).json({ error: 'Server error' });
