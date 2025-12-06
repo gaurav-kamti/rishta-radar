@@ -95,37 +95,36 @@ window.onload = async () => {
 
   // Start button - create session
   document.getElementById('startBtn').addEventListener('click', async () => {
+    const selectedStage = document.querySelector('input[name="relationship-stage"]:checked').value;
+    
+    showLoading('Creating quiz link...');
+    
     try {
-      const selectedStage = document.querySelector('input[name="relationship-stage"]:checked').value;
-      
       const response = await fetch('/api/create-session', { 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ stage: selectedStage })
       });
       const data = await response.json();
+      hideLoading();
       
-      document.getElementById('linkInput').value = data.shareLink;
-      document.getElementById('shareLink').style.display = 'block';
+      if (response.ok) {
+        document.getElementById('linkInput').value = data.shareLink;
+        document.getElementById('shareLink').style.display = 'block';
+        showToast('Quiz link created! 🎉', 'success');
+      } else {
+        showToast(data.error || 'Failed to create link', 'error');
+      }
       
       // Copy link functionality
       document.getElementById('copyBtn').addEventListener('click', () => {
         document.getElementById('linkInput').select();
         document.execCommand('copy');
-        
-        // Show cute copied message
-        const btn = document.getElementById('copyBtn');
-        const originalText = btn.textContent;
-        btn.textContent = '✓ Copied!';
-        btn.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
-        
-        setTimeout(() => {
-          btn.textContent = originalText;
-          btn.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
-        }, 2000);
+        showToast('Link copied! 📋', 'success');
       });
     } catch (error) {
-      alert('Error creating session');
+      hideLoading();
+      showToast('Network error. Please try again.', 'error');
     }
   });
 };
@@ -191,5 +190,22 @@ window.onload = async () => {
       linkInputMale.select();
       document.execCommand('copy');
       showToast('Link copied! 📋', 'success');
+    });
+  }
+
+
+  // Close share link buttons
+  const closeShareLink = document.getElementById('closeShareLink');
+  const closeShareLinkMale = document.getElementById('closeShareLinkMale');
+  
+  if (closeShareLink) {
+    closeShareLink.addEventListener('click', () => {
+      document.getElementById('shareLink').style.display = 'none';
+    });
+  }
+  
+  if (closeShareLinkMale) {
+    closeShareLinkMale.addEventListener('click', () => {
+      document.getElementById('shareLinkMale').style.display = 'none';
     });
   }
